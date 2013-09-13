@@ -108,6 +108,9 @@ namespace WebDesk
                 var nameAndValue = header.Split(new char[] { ':' }, 2);
                 context.Response.Add(new HttpServer.Headers.StringHeader(nameAndValue[0], nameAndValue[1]));
            }
+
+           context.Response.Add(new HttpServer.Headers.StringHeader("X-UA-Compatible", "IE=9"));
+
             context.Response.ContentLength.Value = outputBody.Length;
             var outputBodyBytes = ASCIIEncoding.ASCII.GetBytes(outputBody);
             context.Response.Body.Write(outputBodyBytes, 0, outputBodyBytes.Length);
