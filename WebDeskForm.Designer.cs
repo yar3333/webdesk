@@ -34,14 +34,12 @@
             // webBrowser
             // 
             this.webBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser.IsWebBrowserContextMenuEnabled = false;
             this.webBrowser.Location = new System.Drawing.Point(0, 0);
             this.webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser.Name = "webBrowser";
             this.webBrowser.Size = new System.Drawing.Size(799, 530);
             this.webBrowser.TabIndex = 0;
             this.webBrowser.Url = new System.Uri("about:blank", System.UriKind.Absolute);
-            this.webBrowser.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.webBrowser_Navigating);
             // 
             // WebDeskForm
             // 
@@ -51,7 +49,6 @@
             this.Controls.Add(this.webBrowser);
             this.Name = "WebDeskForm";
             this.Text = "DeskWeb";
-            this.Load += new System.EventHandler(this.WebDeskForm_Load);
             this.ResumeLayout(false);
 
         }
